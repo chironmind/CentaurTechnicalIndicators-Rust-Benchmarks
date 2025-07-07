@@ -1,0 +1,74 @@
+[package]
+name = "rustti_benchmarks"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+criterion = "0.6.0"
+
+[dependencies]
+rust_ti = "2.0.1"
+
+[[bench]]
+name = "rsi"
+harness = false
+
+[[bench]]
+name = "so"
+harness = false
+
+[[bench]]
+name = "slow_so"
+harness = false
+
+[[bench]]
+name = "slowest_so"
+harness = false
+
+[[bench]]
+name = "williams_r"
+harness = false
+
+[[bench]]
+name = "mfi"
+harness = false
+
+[[bench]]
+name = "roc"
+harness = false
+
+[[bench]]
+name = "obv"
+harness = false
+
+[[bench]]
+name = "cci"
+harness = false
+
+[[bench]]
+name = "mg_cci"
+harness = false
+
+[[bench]]
+name = "macd"
+harness = false
+
+[[bench]]
+name = "mg_macd"
+harness = false
+
+[[bench]]
+name = "co"
+harness = false
+
+[[bench]]
+name = "ppo"
+harness = false
+
+[[bench]]
+name = "cmo"
+harness = false
+
+
+
+
