@@ -69,6 +69,196 @@ harness = false
 name = "cmo"
 harness = false
 
+[[bench]]
+name = "cnst_env"
+harness = false
+
+[[bench]]
+name = "mg_env"
+harness = false
+
+[[bench]]
+name = "cnst_bands"
+harness = false
+
+[[bench]]
+name = "mg_bands"
+harness = false
+
+[[bench]]
+name = "icloud"
+harness = false
+
+[[bench]]
+name = "donchian_chnl"
+harness = false
+
+[[bench]]
+name = "keltner_chnl"
+harness = false
+
+[[bench]]
+name = "supertrend"
+harness = false
+
+[[bench]]
+name = "aroon_up"
+harness = false
+
+[[bench]]
+name = "aroon_down"
+harness = false
+
+[[bench]]
+name = "aroon_indicator"
+harness = false
+
+[[bench]]
+name = "parabolic_tps"
+harness = false
+
+[[bench]]
+name = "dir_mov_sys"
+harness = false
+
+[[bench]]
+name = "vpt"
+harness = false
+
+[[bench]]
+name = "tsi"
+harness = false
+
+[[bench]]
+name = "ad"
+harness = false
+
+[[bench]]
+name = "pvi"
+harness = false
+
+[[bench]]
+name = "nvi"
+harness = false
+
+[[bench]]
+name = "rvi"
+harness = false
+
+[[bench]]
+name = "roi"
+harness = false
+
+[[bench]]
+name = "tr"
+harness = false
+
+[[bench]]
+name = "atr"
+harness = false
+
+[[bench]]
+name = "ibs"
+harness = false
+
+[[bench]]
+name = "pi"
+harness = false
+
+[[bench]]
+name = "mean"
+harness = false
+
+[[bench]]
+name = "median"
+harness = false
+
+[[bench]]
+name = "mode"
+harness = false
+
+[[bench]]
+name = "log"
+harness = false
+
+[[bench]]
+name = "log_diff"
+harness = false
+
+[[bench]]
+name = "var"
+harness = false
+
+[[bench]]
+name = "stdev"
+harness = false
+
+[[bench]]
+name = "mean_abs_dev"
+harness = false
+
+[[bench]]
+name = "median_abs_dev"
+harness = false
+
+[[bench]]
+name = "mode_abs_dev"
+harness = false
+
+[[bench]]
+name = "peaks"
+harness = false
+
+[[bench]]
+name = "valleys"
+harness = false
+
+[[bench]]
+name = "peak_trend"
+harness = false
+
+[[bench]]
+name = "valley_trend"
+harness = false
+
+[[bench]]
+name = "overall_trend"
+harness = false
+
+[[bench]]
+name = "break_down_trends"
+harness = false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
