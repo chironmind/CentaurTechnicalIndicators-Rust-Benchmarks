@@ -1,11 +1,14 @@
 use rust_ti::basic_indicators::bulk as basic_indicators;
 use rust_ti::candle_indicators::bulk as candle_indicators;
 use rust_ti::chart_trends;
+use rust_ti::correlation_indicators::bulk as correlation_indicators;
 use rust_ti::momentum_indicators::bulk as momentum_indicators;
+use rust_ti::moving_average::bulk as moving_average;
 use rust_ti::other_indicators::bulk as other_indicators;
 use rust_ti::strength_indicators::bulk as strength_indicators;
 use rust_ti::trend_indicators::bulk as trend_indicators;
-use rust_ti::{CentralPoint, ConstantModelType, DeviationModel, Position};
+use rust_ti::volatility_indicators::bulk as volatility_indicators;
+use rust_ti::{CentralPoint, ConstantModelType, DeviationModel, MovingAverageType, Position};
 
 mod data_constants;
 
@@ -393,5 +396,52 @@ pub fn compute_break_down_trends() -> Vec<(usize, usize, f64, f64)> {
         3.0,
         2.0,
         3.0,
+    )
+}
+
+// Correlation Indicators
+
+pub fn compute_corr() -> Vec<f64> {
+    correlation_indicators::correlate_asset_prices(
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        ConstantModelType::SimpleMovingAverage,
+        DeviationModel::StandardDeviation,
+        5,
+    )
+}
+
+// Moving Average
+
+pub fn compute_ma() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Simple, 5)
+}
+
+pub fn compute_sma() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Smoothed, 5)
+}
+
+pub fn compute_ema() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Exponential, 5)
+}
+
+pub fn compute_mg_dyn() -> Vec<f64> {
+    moving_average::mcginley_dynamic(&data_constants::PRICES, 0.0, 5)
+}
+
+// Volatility Indicators
+
+pub fn compute_ulcer() -> Vec<f64> {
+    volatility_indicators::ulcer_index(&data_constants::PRICES, 5)
+}
+
+pub fn compute_vs() -> Vec<f64> {
+    volatility_indicators::volatility_system(
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        &data_constants::CLOSE,
+        5,
+        3.0,
+        rust_ti::ConstantModelType::SimpleMovingAverage,
     )
 }

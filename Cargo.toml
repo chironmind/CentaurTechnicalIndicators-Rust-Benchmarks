@@ -7,6 +7,7 @@ edition = "2021"
 criterion = "0.6.0"
 
 [dependencies]
+#rust_ti = { path = "../rust_ti" }
 rust_ti = "2.0.1"
 
 [[bench]]
@@ -229,36 +230,31 @@ harness = false
 name = "break_down_trends"
 harness = false
 
+[[bench]]
+name = "corr"
+harness = false
 
+[[bench]]
+name = "ma"
+harness = false
 
+[[bench]]
+name = "sma"
+harness = false
 
+[[bench]]
+name = "ema"
+harness = false
 
+[[bench]]
+name = "mg_dyn"
+harness = false
 
+[[bench]]
+name = "ulcer"
+harness = false
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[[bench]]
+name = "vs"
+harness = false
 

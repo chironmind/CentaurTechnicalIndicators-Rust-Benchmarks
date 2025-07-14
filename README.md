@@ -1,27 +1,82 @@
 # RustTI-benchmarks
 
-Benchmarks for [RustTI](https://github.com/0100101001010000/RustTI)
+Welcome to **RustTI-benchmarks**!  
+This project provides fair, reproducible benchmarks for [RustTI](https://github.com/0100101001010000/RustTI), a high-performance Rust library for technical indicators.
 
-## Purpose
+## 🚀 Why Use This Repo?
 
-- Fair, reproducible benchmarks for RustTI 
-- Use realistic OHLCV data and common indicators.
-- Help guide optimization and provide transparency for users.
+- **See how fast RustTI runs** on your machine with realistic OHLCV data and common indicators.
+- **Check for regressions** after making changes to RustTI.
+- **Guide optimization** efforts and give users transparency about performance.
 
-## Structure
+---
 
-- `benches/`: Criterion benchmarks for each indicator.
-- `src/`: Call to each of the indiciators in RustTI
+## 🗂️ Repo Structure
 
-## Running
+- **`benches/`** – Benchmarks for each indicator, powered by [Criterion](https://bheisler.github.io/criterion.rs/book/index.html).
+- **`src/`** – Calls to each indicator in RustTI for benchmarking.
+
+---
+
+## 🏃 Getting Started
+
+### 1. Benchmark RustTI on Your Machine
+
+Curious how RustTI performs for your use case?  
+Run the benchmarks and find out!
+
+**To benchmark all indicators:**
+```sh
+cargo bench
+```
+
+**To benchmark a specific indicator:**
+```sh
+cargo bench --bench rsi
+```
+
+> **Tip:**  
+> Indicators are highly configurable!  
+> If you want to benchmark with your own configuration, edit the relevant code in `lib.rs`.  
+> Different settings can make a huge difference in speed.
+
+_For example, the `commodity_channel_index` with a simple moving average and standard deviation runs in **103.19 µs**.  
+Switching to an exponential moving average and mode absolute deviation jumps to **2.3684 ms** (still fast but over 20x slower!)._
+
+---
+
+### 2. Check for Performance Regressions
+
+If you've contributed changes to RustTI, it's important to make sure you haven't accidentally slowed anything down.
+
+**Step 1:**  
+Run the benchmarks before your changes to get a baseline.
 
 ```sh
 cargo bench
 ```
 
-## Benchmark Results
+**Step 2:**  
+Point your `Cargo.toml` to your local RustTI for testing:
+```toml
+rust_ti = { path = "../rustti" }
+# rust_ti = "2.x.x"
+```
 
-The following table shows the performance comparison of RustTI functions on 10 years of daily data:
+**Step 3:**  
+Run the benchmarks again and compare the results.
+
+---
+
+## 📊 Benchmark Results
+
+Benchmarks were run on a **Raspberry Pi 5 (8GB RAM)** using 10 years of daily data.  
+Why a Raspberry Pi? It’s a familiar, modest baseline, your machine is probably much faster!  
+For more details, see the [Raspberry Pi 5 benchmarks](https://www.raspberrypi.com/news/benchmarking-raspberry-pi-5/).
+
+Benchmarks use [Criterion.rs](https://bheisler.github.io/criterion.rs/book/index.html).
+
+---
 
 ### Momentum Indicators
 
@@ -61,8 +116,8 @@ The following table shows the performance comparison of RustTI functions on 10 y
 | Function                                      | Time per Operation |
 |-----------------------------------------------|--------------------|
 | `aroon_up`                                    | 16.531 µs          |
-| `aroon_down`                                  | 35.058 µs          |
-| `aroon_indicator`                             | 72.880 µs          |
+| `aroon_down`                                  | 16.592 µs          |
+| `aroon_indicator`                             | 66.468 µs          |
 | `parabolic_time_price_system`                 | 43.939 µs          |
 | `directional_movement_system`                 | 88.965 µs          |
 | `volume_price_trend`                          | 6.2801 µs          |
@@ -107,12 +162,45 @@ The following table shows the performance comparison of RustTI functions on 10 y
 | Function                                      | Time per Operation |
 |-----------------------------------------------|--------------------|
 | `peaks`                                       | 93.094 µs          |
-| `valleys`                                     | 190.89 µs          |
+| `valleys`                                     | 92.119 µs          |
 | `peak_trend`                                  | 188.14 µs          |
-| `valley_trend`                                | 379.52 µs          |
+| `valley_trend`                                | 188.81 µs          |
 | `overall_trend`                               | 10.337 µs          |
 | `break_down_trends`                           | 14.655 ms          |
 
-## Contributing
+### Correlation Indicators
 
-- PRs welcome for new indicators, datasets, or improvement suggestions!
+| Function                                      | Time per Operation |
+|-----------------------------------------------|--------------------|
+| `correlate_asset_prices`                      | 231.14 µs          |
+
+### Moving Average
+
+| Function                                      | Time per Operation |
+|-----------------------------------------------|--------------------|
+| `moving_average(Simple)`                      | 17.575 µs          |
+| `moving_average(Smoothed)`                    | 76.601 µs          |
+| `moving_average(Exponential)`                 | 78.505 µs          |
+| `mcginley_dynamic`                            | 39.653 µs          |
+
+### Volatility Indicators
+
+| Function                                      | Time per Operation |
+|-----------------------------------------------|--------------------|
+| `ulcer_index`                                 | 65.959 µs          |
+| `volatility_system`                           | 137.25 µs          |
+
+---
+
+## 🤝 Contributing
+
+We welcome all contributions!  
+- Add new indicators, benchmarks, or datasets.
+- Suggest improvements or open issues.
+- Open a PR—your help makes RustTI better for everyone!
+
+---
+
+**Thank you for checking out RustTI-benchmarks!**  
+Feel free to open an issue or discussion if you have questions or ideas.
+

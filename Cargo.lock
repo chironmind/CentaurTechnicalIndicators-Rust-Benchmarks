@@ -344,8 +344,6 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 [[package]]
 name = "rust_ti"
 version = "2.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2913881c1af931e3a2550c336b6f4f9558129cc2ca4f717123b6501497e89e76"
 
 [[package]]
 name = "rustti_benchmarks"
