@@ -1,4 +1,4 @@
-[Benchmarks Banner](./assets/benchmark-banner.png)
+![Benchmarks Banner](./assets/benchmark-banner.png)
 
 # RustTI-benchmarks
 
