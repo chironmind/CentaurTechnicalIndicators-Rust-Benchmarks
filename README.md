@@ -1,3 +1,5 @@
+[Benchmarks Banner](./assets/benchmark-banner.png)
+
 # RustTI-benchmarks
 
 Welcome to **RustTI-benchmarks**!  
@@ -189,6 +191,18 @@ Benchmarks use [Criterion.rs](https://bheisler.github.io/criterion.rs/book/index
 |-----------------------------------------------|--------------------|
 | `ulcer_index`                                 | 65.959 µs          |
 | `volatility_system`                           | 137.25 µs          |
+
+---
+
+## 📚 About This Repo
+
+This repository is part of a structured documentation suite:
+
+- 📕 **Tutorials:** — [See here](https://github.com/0100101001010000/RustTI-tutorials)
+- 📘 **How-To Guides:** — [See here](https://github.com/0100101001010000/RustTI-how-to-guides)
+- ⏱️  **Benchmarks:** This repo!
+- 📙 **Explanations:** — Coming soon
+- 📗 **Reference:** — [See here](https://docs.rs/rust_ti/latest/rust_ti/)
 
 ---
 
