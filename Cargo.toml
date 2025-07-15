@@ -7,8 +7,8 @@ edition = "2021"
 criterion = "0.6.0"
 
 [dependencies]
-#rust_ti = { path = "../rust_ti" }
-rust_ti = "2.0.1"
+rust_ti = { path = "../rust_ti" }
+#rust_ti = "2.0.1"
 
 [[bench]]
 name = "rsi"
