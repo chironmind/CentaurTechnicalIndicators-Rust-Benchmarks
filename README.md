@@ -3,7 +3,7 @@
 # RustTI-benchmarks
 
 Welcome to **RustTI-benchmarks**!  
-This project provides fair, reproducible benchmarks for [RustTI](https://github.com/0100101001010000/RustTI), a high-performance Rust library for technical indicators.
+This project provides fair, reproducible benchmarks for [RustTI](https://github.com/ChironMind/RustTI), a high-performance Rust library for technical indicators.
 
 ## 🚀 Why Use This Repo?
 
@@ -198,8 +198,8 @@ Benchmarks use [Criterion.rs](https://bheisler.github.io/criterion.rs/book/index
 
 This repository is part of a structured documentation suite:
 
-- 📕 **Tutorials:** — [See here](https://github.com/0100101001010000/RustTI-tutorials)
-- 📘 **How-To Guides:** — [See here](https://github.com/0100101001010000/RustTI-how-to-guides)
+- 📕 **Tutorials:** — [See here](https://github.com/ChironMind/RustTI-tutorials)
+- 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/RustTI-how-to-guides)
 - ⏱️  **Benchmarks:** This repo!
 - 📙 **Explanations:** — Coming soon
 - 📗 **Reference:** — [See here](https://docs.rs/rust_ti/latest/rust_ti/)
