@@ -3,7 +3,7 @@
 # CentaurTechnicalIndicators-Rust-benchmarks
 
 Welcome to **CentaurTechnicalIndicators-Rust-benchmarks**!  
-This project provides fair, reproducible benchmarks for [CentaurTechnicalIndicators-Rust](https://github.com/ChironMind/RustTI), a high-performance Rust library for technical indicators.
+This project provides fair, reproducible benchmarks for [CentaurTechnicalIndicators-Rust](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust), a high-performance Rust library for technical indicators.
 
 ## 🚀 Why Use This Repo?
 
