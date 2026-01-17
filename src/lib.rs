@@ -442,6 +442,6 @@ pub fn compute_vs() -> Vec<f64> {
         &data_constants::CLOSE,
         5,
         3.0,
-        rust_ti::ConstantModelType::SimpleMovingAverage,
+        ConstantModelType::SimpleMovingAverage,
     )
 }

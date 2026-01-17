@@ -8,7 +8,7 @@ criterion = "0.6.0"
 
 [dependencies]
 centaur_technical_indicators = { path = "../rust_ti" }
-#centaur_technical_indicators = "2.0.1"
+#centaur_technical_indicators = "1.0.0"  # Use this once version compatible with 2.x API is published
 
 [[bench]]
 name = "rsi"

@@ -42,6 +42,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "37b2a672a2cb129a2e41c10b1224bb368f9f37a2b16b612598138befd7b37eb5"
 
 [[package]]
+name = "centaur_technical_indicators"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ca5cdc00eed15c0bfa1a910c84dbbe6546b9ccdc117302ff73787f8ec2d91fa2"
+
+[[package]]
 name = "cfg-if"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -342,15 +348,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
-name = "rust_ti"
-version = "2.1.0"
-
-[[package]]
 name = "rustti_benchmarks"
 version = "0.1.0"
 dependencies = [
+ "centaur_technical_indicators",
  "criterion",
- "rust_ti",
 ]
 
 [[package]]
