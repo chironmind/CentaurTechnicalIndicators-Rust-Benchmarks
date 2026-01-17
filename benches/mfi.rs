@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mfi_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI MFI (14)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust MFI (14)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mfi();
             black_box(result);

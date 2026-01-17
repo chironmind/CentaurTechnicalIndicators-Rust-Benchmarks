@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn nvi_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Negative Volume Index", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Negative Volume Index", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_nvi();
             black_box(result);

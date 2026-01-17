@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn dir_mov_sys_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Directional Movement System (5, Simple Ma)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Directional Movement System (5, Simple Ma)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_dir_mov_sys();
             black_box(result);

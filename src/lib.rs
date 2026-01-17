@@ -1,14 +1,14 @@
-use rust_ti::basic_indicators::bulk as basic_indicators;
-use rust_ti::candle_indicators::bulk as candle_indicators;
-use rust_ti::chart_trends;
-use rust_ti::correlation_indicators::bulk as correlation_indicators;
-use rust_ti::momentum_indicators::bulk as momentum_indicators;
-use rust_ti::moving_average::bulk as moving_average;
-use rust_ti::other_indicators::bulk as other_indicators;
-use rust_ti::strength_indicators::bulk as strength_indicators;
-use rust_ti::trend_indicators::bulk as trend_indicators;
-use rust_ti::volatility_indicators::bulk as volatility_indicators;
-use rust_ti::{CentralPoint, ConstantModelType, DeviationModel, MovingAverageType, Position};
+use centaur_technical_indicators::basic_indicators::bulk as basic_indicators;
+use centaur_technical_indicators::candle_indicators::bulk as candle_indicators;
+use centaur_technical_indicators::chart_trends;
+use centaur_technical_indicators::correlation_indicators::bulk as correlation_indicators;
+use centaur_technical_indicators::momentum_indicators::bulk as momentum_indicators;
+use centaur_technical_indicators::moving_average::bulk as moving_average;
+use centaur_technical_indicators::other_indicators::bulk as other_indicators;
+use centaur_technical_indicators::strength_indicators::bulk as strength_indicators;
+use centaur_technical_indicators::trend_indicators::bulk as trend_indicators;
+use centaur_technical_indicators::volatility_indicators::bulk as volatility_indicators;
+use centaur_technical_indicators::{CentralPoint, ConstantModelType, DeviationModel, MovingAverageType, Position};
 
 mod data_constants;
 

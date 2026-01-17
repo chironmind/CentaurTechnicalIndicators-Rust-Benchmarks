@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn peak_trend_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Peak Trend", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Peak Trend", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_peak_trend();
             black_box(result);

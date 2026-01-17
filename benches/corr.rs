@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn corr_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Correlation (5, Simple MA, Std Dev)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Correlation (5, Simple MA, Std Dev)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_corr();
             black_box(result);

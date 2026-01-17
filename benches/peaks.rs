@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn peaks_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Peaks", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Peaks", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_peaks();
             black_box(result);

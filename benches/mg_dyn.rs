@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mg_dyn_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI McGinley Dynamic (5)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust McGinley Dynamic (5)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mg_dyn();
             black_box(result);
