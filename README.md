@@ -198,8 +198,8 @@ Benchmarks use [Criterion.rs](https://bheisler.github.io/criterion.rs/book/index
 
 This repository is part of a structured documentation suite:
 
-- 📕 **Tutorials:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-tutorials)
-- 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-how-to-guides)
+- 📕 **Tutorials:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-Tutorials)
+- 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-How-to-Guides)
 - ⏱️  **Benchmarks:** This repo!
 - 📙 **Explanations:** — Coming soon
 - 📗 **Reference:** — [See here](https://docs.rs/centaur_technical_indicators/latest/centaur_technical_indicators/)
