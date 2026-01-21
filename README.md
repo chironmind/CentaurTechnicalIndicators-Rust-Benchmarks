@@ -61,8 +61,8 @@ cargo bench
 **Step 2:**  
 Point your `Cargo.toml` to your local CentaurTechnicalIndicators-Rust for testing:
 ```toml
-rust_ti = { path = "../rust_ti" }
-# rust_ti = "2.x.x"
+centaur_technical_indicators = { path = "../centaur_technical_indicators" }
+# centaur_technical_indicators = "1.x.x"
 ```
 
 **Step 3:**  
@@ -202,7 +202,7 @@ This repository is part of a structured documentation suite:
 - 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-how-to-guides)
 - ⏱️  **Benchmarks:** This repo!
 - 📙 **Explanations:** — Coming soon
-- 📗 **Reference:** — [See here](https://docs.rs/rust_ti/latest/rust_ti/)
+- 📗 **Reference:** — [See here](https://docs.rs/centaur_technical_indicators/latest/centaur_technical_indicators/)
 
 ---
 
