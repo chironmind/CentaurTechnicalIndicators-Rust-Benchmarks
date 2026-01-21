@@ -4,7 +4,7 @@ use std::hint::black_box;
 
 fn cnst_bands_benchmark(c: &mut Criterion) {
     c.bench_function(
-        "RustTI Constant bands (5, 2.0, Smoothed MA, STD Dev)",
+        "CentaurTechnicalIndicators-Rust Constant bands (5, 2.0, Smoothed MA, STD Dev)",
         |b| {
             b.iter(|| {
                 let result = rustti_benchmarks::compute_cnst_bands();

@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn log_diff_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Log Difference", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Log Difference", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_log_diff();
             black_box(result);

@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn slow_so_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Slow SO (14, Simple MA)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Slow SO (14, Simple MA)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_slow_so();
             black_box(result);

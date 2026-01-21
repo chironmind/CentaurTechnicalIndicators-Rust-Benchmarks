@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn cnst_env_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Constant Envelopers (10, 3.0, Smoothed MA)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Constant Envelopes (10, 3.0, Smoothed MA)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_cnst_env();
             black_box(result);

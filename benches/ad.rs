@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn ad_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Acumulation Distribution ", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Accumulation Distribution ", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_ad();
             black_box(result);

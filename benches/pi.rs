@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn pi_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Positivity Indicator", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Positivity Indicator", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_pi();
             black_box(result);
