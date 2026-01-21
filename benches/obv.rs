@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn obv_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI OBV", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust OBV", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_obv();
             black_box(result);

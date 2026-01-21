@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mg_cci_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI McGinley CCI (14, Mean Abs Dev)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust McGinley CCI (14, Mean Abs Dev)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mg_cci();
             black_box(result);

@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn median_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Median", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Median", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_median();
             black_box(result);

@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn ma_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Simple Moving Average (5)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Simple Moving Average (5)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_ma();
             black_box(result);

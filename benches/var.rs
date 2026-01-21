@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn var_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Variance", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Variance", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_var();
             black_box(result);

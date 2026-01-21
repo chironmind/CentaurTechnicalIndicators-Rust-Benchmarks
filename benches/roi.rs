@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn roi_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Return on Investment", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Return on Investment", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_roi();
             black_box(result);

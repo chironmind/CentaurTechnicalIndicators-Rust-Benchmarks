@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mean_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Mean", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Mean", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mean();
             black_box(result);
