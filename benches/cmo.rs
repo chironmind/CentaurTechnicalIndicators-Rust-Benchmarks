@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn cmo_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI CMO (14)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust CMO (14)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_cmo();
             black_box(result);

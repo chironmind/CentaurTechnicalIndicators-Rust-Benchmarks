@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn atr_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Average True Range", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Average True Range", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_atr();
             black_box(result);

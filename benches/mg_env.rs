@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mg_env_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI McGinley Envelopes (10, 3.0)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust McGinley Envelopes (10, 3.0)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mg_env();
             black_box(result);

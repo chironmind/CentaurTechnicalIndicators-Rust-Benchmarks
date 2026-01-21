@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn ppo_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI PPO (7, 14, Simple MA)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust PPO (7, 14, Simple MA)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_ppo();
             black_box(result);

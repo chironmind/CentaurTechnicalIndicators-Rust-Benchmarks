@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn ema_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Exponential Moving Average (5)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Exponential Moving Average (5)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_ema();
             black_box(result);

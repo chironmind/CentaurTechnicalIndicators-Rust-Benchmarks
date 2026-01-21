@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn median_abs_dev_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Median Absolute Deviation", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Median Absolute Deviation", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_median_abs_dev();
             black_box(result);

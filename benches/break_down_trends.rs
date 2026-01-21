@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn break_down_trends_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Break Down Trends", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Break Down Trends", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_break_down_trends();
             black_box(result);

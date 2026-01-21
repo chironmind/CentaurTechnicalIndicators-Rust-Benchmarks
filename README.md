@@ -1,14 +1,14 @@
 ![Benchmarks Banner](./assets/benchmark-banner.png)
 
-# RustTI-benchmarks
+# CentaurTechnicalIndicators-Rust-Benchmarks
 
-Welcome to **RustTI-benchmarks**!  
-This project provides fair, reproducible benchmarks for [RustTI](https://github.com/ChironMind/RustTI), a high-performance Rust library for technical indicators.
+Welcome to **CentaurTechnicalIndicators-Rust-Benchmarks**!  
+This project provides fair, reproducible benchmarks for [CentaurTechnicalIndicators-Rust](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust), a high-performance Rust library for technical indicators.
 
 ## 🚀 Why Use This Repo?
 
-- **See how fast RustTI runs** on your machine with realistic OHLCV data and common indicators.
-- **Check for regressions** after making changes to RustTI.
+- **See how fast CentaurTechnicalIndicators-Rust runs** on your machine with realistic OHLCV data and common indicators.
+- **Check for regressions** after making changes to CentaurTechnicalIndicators-Rust.
 - **Guide optimization** efforts and give users transparency about performance.
 
 ---
@@ -16,15 +16,15 @@ This project provides fair, reproducible benchmarks for [RustTI](https://github.
 ## 🗂️ Repo Structure
 
 - **`benches/`** – Benchmarks for each indicator, powered by [Criterion](https://bheisler.github.io/criterion.rs/book/index.html).
-- **`src/`** – Calls to each indicator in RustTI for benchmarking.
+- **`src/`** – Calls to each indicator in CentaurTechnicalIndicators-Rust for benchmarking.
 
 ---
 
 ## 🏃 Getting Started
 
-### 1. Benchmark RustTI on Your Machine
+### 1. Benchmark CentaurTechnicalIndicators-Rust on Your Machine
 
-Curious how RustTI performs for your use case?  
+Curious how CentaurTechnicalIndicators-Rust performs for your use case?  
 Run the benchmarks and find out!
 
 **To benchmark all indicators:**
@@ -49,7 +49,7 @@ Switching to an exponential moving average and mode absolute deviation jumps to 
 
 ### 2. Check for Performance Regressions
 
-If you've contributed changes to RustTI, it's important to make sure you haven't accidentally slowed anything down.
+If you've contributed changes to CentaurTechnicalIndicators-Rust, it's important to make sure you haven't accidentally slowed anything down.
 
 **Step 1:**  
 Run the benchmarks before your changes to get a baseline.
@@ -59,9 +59,9 @@ cargo bench
 ```
 
 **Step 2:**  
-Point your `Cargo.toml` to your local RustTI for testing:
+Point your `Cargo.toml` to your local CentaurTechnicalIndicators-Rust for testing:
 ```toml
-rust_ti = { path = "../rustti" }
+rust_ti = { path = "../rust_ti" }
 # rust_ti = "2.x.x"
 ```
 
@@ -198,8 +198,8 @@ Benchmarks use [Criterion.rs](https://bheisler.github.io/criterion.rs/book/index
 
 This repository is part of a structured documentation suite:
 
-- 📕 **Tutorials:** — [See here](https://github.com/ChironMind/RustTI-tutorials)
-- 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/RustTI-how-to-guides)
+- 📕 **Tutorials:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-tutorials)
+- 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-how-to-guides)
 - ⏱️  **Benchmarks:** This repo!
 - 📙 **Explanations:** — Coming soon
 - 📗 **Reference:** — [See here](https://docs.rs/rust_ti/latest/rust_ti/)
@@ -211,10 +211,10 @@ This repository is part of a structured documentation suite:
 We welcome all contributions!  
 - Add new indicators, benchmarks, or datasets.
 - Suggest improvements or open issues.
-- Open a PR—your help makes RustTI better for everyone!
+- Open a PR—your help makes CentaurTechnicalIndicators-Rust better for everyone!
 
 ---
 
-**Thank you for checking out RustTI-benchmarks!**  
+**Thank you for checking out CentaurTechnicalIndicators-Rust-Benchmarks!**  
 Feel free to open an issue or discussion if you have questions or ideas.
 

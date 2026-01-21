@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mg_bands_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI McGinley bands (5, 2.0, STD Dev)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust McGinley bands (5, 2.0, STD Dev)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mg_bands();
             black_box(result);

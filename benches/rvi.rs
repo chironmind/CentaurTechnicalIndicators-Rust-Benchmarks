@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn rvi_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Relative Vigor Index", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Relative Vigor Index", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_rvi();
             black_box(result);
