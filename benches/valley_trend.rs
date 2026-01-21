@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn valley_trend_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Valley Trend", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Valley Trend", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_valley_trend();
             black_box(result);

@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn supertrend_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Supertrend (5, 2.0, Simple Ma)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Supertrend (5, 2.0, Simple Ma)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_supertrend();
             black_box(result);

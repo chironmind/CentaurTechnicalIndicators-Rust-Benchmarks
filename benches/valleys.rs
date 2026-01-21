@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn valleys_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Valleys", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Valleys", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_valleys();
             black_box(result);

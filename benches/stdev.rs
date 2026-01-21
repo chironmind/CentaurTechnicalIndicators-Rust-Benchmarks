@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn stdev_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Standard Deviation", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Standard Deviation", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_stdev();
             black_box(result);

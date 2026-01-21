@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn aroon_up_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Aroon up (5)", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Aroon up (5)", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_aroon_up();
             black_box(result);

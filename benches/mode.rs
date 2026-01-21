@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn mode_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Mode", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Mode", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_mode();
             black_box(result);

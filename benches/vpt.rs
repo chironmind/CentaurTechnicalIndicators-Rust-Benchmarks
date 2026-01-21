@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn vpt_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Volume Price Trend", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Volume Price Trend", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_vpt();
             black_box(result);

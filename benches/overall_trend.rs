@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn overall_trend_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI Overall Trend", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust Overall Trend", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_overall_trend();
             black_box(result);

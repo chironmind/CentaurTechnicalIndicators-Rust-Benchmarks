@@ -3,7 +3,7 @@ use rustti_benchmarks;
 use std::hint::black_box;
 
 fn tr_benchmark(c: &mut Criterion) {
-    c.bench_function("RustTI True Range", |b| {
+    c.bench_function("CentaurTechnicalIndicators-Rust True Range", |b| {
         b.iter(|| {
             let result = rustti_benchmarks::compute_tr();
             black_box(result);
