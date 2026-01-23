@@ -1,5 +1,3 @@
-![Benchmarks Banner](./assets/benchmark-banner.png)
-
 # CentaurTechnicalIndicators-Rust-Benchmarks
 
 Welcome to **CentaurTechnicalIndicators-Rust-Benchmarks**!  
@@ -7,7 +5,7 @@ This project provides fair, reproducible benchmarks for [CentaurTechnicalIndicat
 
 ## 🚀 Why Use This Repo?
 
-- **See how fast CentaurTechnicalIndicators-Rust runs** on your machine with realistic OHLCV data and common indicators.
+- **See how fast CentaurTechnicalIndicators-Rust runs** on your machine with realistic OHLCV data.
 - **Check for regressions** after making changes to CentaurTechnicalIndicators-Rust.
 - **Guide optimization** efforts and give users transparency about performance.
 
@@ -61,7 +59,7 @@ cargo bench
 **Step 2:**  
 Point your `Cargo.toml` to your local CentaurTechnicalIndicators-Rust for testing:
 ```toml
-centaur_technical_indicators = { path = "../centaur_technical_indicators" }
+centaur_technical_indicators = { path = "../CentaurTechnicalIndicators-Rust" }
 # centaur_technical_indicators = "1.x.x"
 ```
 
@@ -201,7 +199,7 @@ This repository is part of a structured documentation suite:
 - 📕 **Tutorials:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-Tutorials)
 - 📘 **How-To Guides:** — [See here](https://github.com/ChironMind/CentaurTechnicalIndicators-Rust-How-to-Guides)
 - ⏱️  **Benchmarks:** This repo!
-- 📙 **Explanations:** — Coming soon
+- 📙 **Explanations:** — [centaurlabs.pages.dev](https://centaurlabs.pages.dev/)
 - 📗 **Reference:** — [See here](https://docs.rs/centaur_technical_indicators/latest/centaur_technical_indicators/)
 
 ---
@@ -217,4 +215,3 @@ We welcome all contributions!
 
 **Thank you for checking out CentaurTechnicalIndicators-Rust-Benchmarks!**  
 Feel free to open an issue or discussion if you have questions or ideas.
-
