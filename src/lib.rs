@@ -13,13 +13,17 @@ use centaur_technical_indicators::chart_trends::TrendBreakConfig;
 
 mod data_constants;
 
+// Constants for data sizes
+const SMALL_SIZE: usize = 100;
+const MEDIUM_SIZE: usize = 1000;
+
 // Helper functions for accessing different data sizes
 pub fn get_small_data() -> &'static [f64] {
-    &data_constants::PRICES[..100]
+    &data_constants::PRICES[..SMALL_SIZE]
 }
 
 pub fn get_medium_data() -> &'static [f64] {
-    &data_constants::PRICES[..1000]
+    &data_constants::PRICES[..MEDIUM_SIZE]
 }
 
 pub fn get_large_data() -> &'static [f64] {
@@ -27,43 +31,63 @@ pub fn get_large_data() -> &'static [f64] {
 }
 
 pub fn get_small_high() -> &'static [f64] {
-    &data_constants::HIGH[..100]
+    &data_constants::HIGH[..SMALL_SIZE]
 }
 
 pub fn get_medium_high() -> &'static [f64] {
-    &data_constants::HIGH[..1000]
+    &data_constants::HIGH[..MEDIUM_SIZE]
+}
+
+pub fn get_large_high() -> &'static [f64] {
+    &data_constants::HIGH
 }
 
 pub fn get_small_low() -> &'static [f64] {
-    &data_constants::LOW[..100]
+    &data_constants::LOW[..SMALL_SIZE]
 }
 
 pub fn get_medium_low() -> &'static [f64] {
-    &data_constants::LOW[..1000]
+    &data_constants::LOW[..MEDIUM_SIZE]
+}
+
+pub fn get_large_low() -> &'static [f64] {
+    &data_constants::LOW
 }
 
 pub fn get_small_close() -> &'static [f64] {
-    &data_constants::CLOSE[..100]
+    &data_constants::CLOSE[..SMALL_SIZE]
 }
 
 pub fn get_medium_close() -> &'static [f64] {
-    &data_constants::CLOSE[..1000]
+    &data_constants::CLOSE[..MEDIUM_SIZE]
+}
+
+pub fn get_large_close() -> &'static [f64] {
+    &data_constants::CLOSE
 }
 
 pub fn get_small_open() -> &'static [f64] {
-    &data_constants::OPEN[..100]
+    &data_constants::OPEN[..SMALL_SIZE]
 }
 
 pub fn get_medium_open() -> &'static [f64] {
-    &data_constants::OPEN[..1000]
+    &data_constants::OPEN[..MEDIUM_SIZE]
+}
+
+pub fn get_large_open() -> &'static [f64] {
+    &data_constants::OPEN
 }
 
 pub fn get_small_volume() -> &'static [f64] {
-    &data_constants::VOLUME[..100]
+    &data_constants::VOLUME[..SMALL_SIZE]
 }
 
 pub fn get_medium_volume() -> &'static [f64] {
-    &data_constants::VOLUME[..1000]
+    &data_constants::VOLUME[..MEDIUM_SIZE]
+}
+
+pub fn get_large_volume() -> &'static [f64] {
+    &data_constants::VOLUME
 }
 
 // Momentum indicators
