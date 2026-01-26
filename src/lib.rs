@@ -153,6 +153,42 @@ pub fn compute_williams_r() -> Vec<f64> {
     ).unwrap()
 }
 
+pub fn compute_williams_r_small() -> Vec<f64> {
+    momentum_indicators::williams_percent_r(
+        get_small_high(),
+        get_small_low(),
+        get_small_close(),
+        14,
+    ).unwrap()
+}
+
+pub fn compute_williams_r_medium() -> Vec<f64> {
+    momentum_indicators::williams_percent_r(
+        get_medium_high(),
+        get_medium_low(),
+        get_medium_close(),
+        14,
+    ).unwrap()
+}
+
+pub fn compute_williams_r_7() -> Vec<f64> {
+    momentum_indicators::williams_percent_r(
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        &data_constants::CLOSE,
+        7,
+    ).unwrap()
+}
+
+pub fn compute_williams_r_21() -> Vec<f64> {
+    momentum_indicators::williams_percent_r(
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        &data_constants::CLOSE,
+        21,
+    ).unwrap()
+}
+
 pub fn compute_mfi() -> Vec<f64> {
     momentum_indicators::money_flow_index(&data_constants::PRICES, &data_constants::VOLUME, 14).unwrap()
 }
@@ -175,6 +211,56 @@ pub fn compute_cci() -> Vec<f64> {
     ).unwrap()
 }
 
+pub fn compute_cci_small() -> Vec<f64> {
+    momentum_indicators::commodity_channel_index(
+        get_small_data(),
+        ConstantModelType::SimpleMovingAverage,
+        DeviationModel::StandardDeviation,
+        0.015,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_cci_medium() -> Vec<f64> {
+    momentum_indicators::commodity_channel_index(
+        get_medium_data(),
+        ConstantModelType::SimpleMovingAverage,
+        DeviationModel::StandardDeviation,
+        0.015,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_cci_exp() -> Vec<f64> {
+    momentum_indicators::commodity_channel_index(
+        &data_constants::PRICES,
+        ConstantModelType::ExponentialMovingAverage,
+        DeviationModel::StandardDeviation,
+        0.015,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_cci_mad() -> Vec<f64> {
+    momentum_indicators::commodity_channel_index(
+        &data_constants::PRICES,
+        ConstantModelType::SimpleMovingAverage,
+        DeviationModel::MeanAbsoluteDeviation,
+        0.015,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_cci_20() -> Vec<f64> {
+    momentum_indicators::commodity_channel_index(
+        &data_constants::PRICES,
+        ConstantModelType::SimpleMovingAverage,
+        DeviationModel::StandardDeviation,
+        0.015,
+        20,
+    ).unwrap()
+}
+
 pub fn compute_mg_cci() -> Vec<(f64, f64)> {
     momentum_indicators::mcginley_dynamic_commodity_channel_index(
         &data_constants::PRICES,
@@ -192,6 +278,46 @@ pub fn compute_macd() -> Vec<f64> {
         ConstantModelType::SimpleMovingAverage,
         14,
         ConstantModelType::SimpleMovingAverage,
+    ).unwrap()
+}
+
+pub fn compute_macd_small() -> Vec<f64> {
+    momentum_indicators::macd_line(
+        get_small_data(),
+        7,
+        ConstantModelType::SimpleMovingAverage,
+        14,
+        ConstantModelType::SimpleMovingAverage,
+    ).unwrap()
+}
+
+pub fn compute_macd_medium() -> Vec<f64> {
+    momentum_indicators::macd_line(
+        get_medium_data(),
+        7,
+        ConstantModelType::SimpleMovingAverage,
+        14,
+        ConstantModelType::SimpleMovingAverage,
+    ).unwrap()
+}
+
+pub fn compute_macd_exp() -> Vec<f64> {
+    momentum_indicators::macd_line(
+        &data_constants::PRICES,
+        7,
+        ConstantModelType::ExponentialMovingAverage,
+        14,
+        ConstantModelType::ExponentialMovingAverage,
+    ).unwrap()
+}
+
+pub fn compute_macd_standard() -> Vec<f64> {
+    momentum_indicators::macd_line(
+        &data_constants::PRICES,
+        12,
+        ConstantModelType::ExponentialMovingAverage,
+        26,
+        ConstantModelType::ExponentialMovingAverage,
     ).unwrap()
 }
 
@@ -405,6 +531,46 @@ pub fn compute_atr() -> Vec<f64> {
     ).unwrap()
 }
 
+pub fn compute_atr_small() -> Vec<f64> {
+    other_indicators::average_true_range(
+        get_small_close(),
+        get_small_high(),
+        get_small_low(),
+        ConstantModelType::SimpleMovingAverage,
+        5,
+    ).unwrap()
+}
+
+pub fn compute_atr_medium() -> Vec<f64> {
+    other_indicators::average_true_range(
+        get_medium_close(),
+        get_medium_high(),
+        get_medium_low(),
+        ConstantModelType::SimpleMovingAverage,
+        5,
+    ).unwrap()
+}
+
+pub fn compute_atr_14() -> Vec<f64> {
+    other_indicators::average_true_range(
+        &data_constants::CLOSE,
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_atr_exp() -> Vec<f64> {
+    other_indicators::average_true_range(
+        &data_constants::CLOSE,
+        &data_constants::HIGH,
+        &data_constants::LOW,
+        ConstantModelType::ExponentialMovingAverage,
+        14,
+    ).unwrap()
+}
+
 pub fn compute_ibs() -> Vec<f64> {
     other_indicators::internal_bar_strength(
         &data_constants::HIGH,
@@ -428,8 +594,32 @@ pub fn compute_mean() -> Vec<f64> {
     basic_indicators::mean(&data_constants::PRICES, 5).unwrap()
 }
 
+pub fn compute_mean_small() -> Vec<f64> {
+    basic_indicators::mean(get_small_data(), 5).unwrap()
+}
+
+pub fn compute_mean_medium() -> Vec<f64> {
+    basic_indicators::mean(get_medium_data(), 5).unwrap()
+}
+
+pub fn compute_mean_20() -> Vec<f64> {
+    basic_indicators::mean(&data_constants::PRICES, 20).unwrap()
+}
+
 pub fn compute_median() -> Vec<f64> {
     basic_indicators::median(&data_constants::PRICES, 5).unwrap()
+}
+
+pub fn compute_median_small() -> Vec<f64> {
+    basic_indicators::median(get_small_data(), 5).unwrap()
+}
+
+pub fn compute_median_medium() -> Vec<f64> {
+    basic_indicators::median(get_medium_data(), 5).unwrap()
+}
+
+pub fn compute_median_20() -> Vec<f64> {
+    basic_indicators::median(&data_constants::PRICES, 20).unwrap()
 }
 
 pub fn compute_mode() -> Vec<f64> {
@@ -440,6 +630,14 @@ pub fn compute_log() -> Vec<f64> {
     basic_indicators::log(&data_constants::PRICES).unwrap()
 }
 
+pub fn compute_log_small() -> Vec<f64> {
+    basic_indicators::log(get_small_data()).unwrap()
+}
+
+pub fn compute_log_medium() -> Vec<f64> {
+    basic_indicators::log(get_medium_data()).unwrap()
+}
+
 pub fn compute_log_diff() -> Vec<f64> {
     basic_indicators::log_difference(&data_constants::PRICES).unwrap()
 }
@@ -448,8 +646,32 @@ pub fn compute_var() -> Vec<f64> {
     basic_indicators::variance(&data_constants::PRICES, 5).unwrap()
 }
 
+pub fn compute_var_small() -> Vec<f64> {
+    basic_indicators::variance(get_small_data(), 5).unwrap()
+}
+
+pub fn compute_var_medium() -> Vec<f64> {
+    basic_indicators::variance(get_medium_data(), 5).unwrap()
+}
+
+pub fn compute_var_20() -> Vec<f64> {
+    basic_indicators::variance(&data_constants::PRICES, 20).unwrap()
+}
+
 pub fn compute_stdev() -> Vec<f64> {
     basic_indicators::standard_deviation(&data_constants::PRICES, 5).unwrap()
+}
+
+pub fn compute_stdev_small() -> Vec<f64> {
+    basic_indicators::standard_deviation(get_small_data(), 5).unwrap()
+}
+
+pub fn compute_stdev_medium() -> Vec<f64> {
+    basic_indicators::standard_deviation(get_medium_data(), 5).unwrap()
+}
+
+pub fn compute_stdev_20() -> Vec<f64> {
+    basic_indicators::standard_deviation(&data_constants::PRICES, 20).unwrap()
 }
 
 pub fn compute_mean_abs_dev() -> Vec<f64> {
