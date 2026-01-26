@@ -128,6 +128,18 @@ pub fn compute_so() -> Vec<f64> {
     momentum_indicators::stochastic_oscillator(&data_constants::PRICES, 14).unwrap()
 }
 
+pub fn compute_so_small() -> Vec<f64> {
+    momentum_indicators::stochastic_oscillator(get_small_data(), 14).unwrap()
+}
+
+pub fn compute_so_medium() -> Vec<f64> {
+    momentum_indicators::stochastic_oscillator(get_medium_data(), 14).unwrap()
+}
+
+pub fn compute_so_5() -> Vec<f64> {
+    momentum_indicators::stochastic_oscillator(&data_constants::PRICES, 5).unwrap()
+}
+
 pub fn compute_slow_so() -> Vec<f64> {
     momentum_indicators::slow_stochastic(
         &data_constants::PRICES,
@@ -136,9 +148,49 @@ pub fn compute_slow_so() -> Vec<f64> {
     ).unwrap()
 }
 
+pub fn compute_slow_so_small() -> Vec<f64> {
+    momentum_indicators::slow_stochastic(
+        get_small_data(),
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_slow_so_medium() -> Vec<f64> {
+    momentum_indicators::slow_stochastic(
+        get_medium_data(),
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_slow_so_exp() -> Vec<f64> {
+    momentum_indicators::slow_stochastic(
+        &data_constants::PRICES,
+        ConstantModelType::ExponentialMovingAverage,
+        14,
+    ).unwrap()
+}
+
 pub fn compute_slowest_so() -> Vec<f64> {
     momentum_indicators::slowest_stochastic(
         &data_constants::PRICES,
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_slowest_so_small() -> Vec<f64> {
+    momentum_indicators::slowest_stochastic(
+        get_small_data(),
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_slowest_so_medium() -> Vec<f64> {
+    momentum_indicators::slowest_stochastic(
+        get_medium_data(),
         ConstantModelType::SimpleMovingAverage,
         14,
     ).unwrap()
@@ -193,12 +245,40 @@ pub fn compute_mfi() -> Vec<f64> {
     momentum_indicators::money_flow_index(&data_constants::PRICES, &data_constants::VOLUME, 14).unwrap()
 }
 
+pub fn compute_mfi_small() -> Vec<f64> {
+    momentum_indicators::money_flow_index(get_small_data(), get_small_volume(), 14).unwrap()
+}
+
+pub fn compute_mfi_medium() -> Vec<f64> {
+    momentum_indicators::money_flow_index(get_medium_data(), get_medium_volume(), 14).unwrap()
+}
+
+pub fn compute_mfi_7() -> Vec<f64> {
+    momentum_indicators::money_flow_index(&data_constants::PRICES, &data_constants::VOLUME, 7).unwrap()
+}
+
 pub fn compute_roc() -> Vec<f64> {
     momentum_indicators::rate_of_change(&data_constants::PRICES).unwrap()
 }
 
+pub fn compute_roc_small() -> Vec<f64> {
+    momentum_indicators::rate_of_change(get_small_data()).unwrap()
+}
+
+pub fn compute_roc_medium() -> Vec<f64> {
+    momentum_indicators::rate_of_change(get_medium_data()).unwrap()
+}
+
 pub fn compute_obv() -> Vec<f64> {
     momentum_indicators::on_balance_volume(&data_constants::PRICES, &data_constants::VOLUME, 0.0).unwrap()
+}
+
+pub fn compute_obv_small() -> Vec<f64> {
+    momentum_indicators::on_balance_volume(get_small_data(), get_small_volume(), 0.0).unwrap()
+}
+
+pub fn compute_obv_medium() -> Vec<f64> {
+    momentum_indicators::on_balance_volume(get_medium_data(), get_medium_volume(), 0.0).unwrap()
 }
 
 pub fn compute_cci() -> Vec<f64> {
