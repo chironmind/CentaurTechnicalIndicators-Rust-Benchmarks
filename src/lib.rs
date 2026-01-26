@@ -13,6 +13,59 @@ use centaur_technical_indicators::chart_trends::TrendBreakConfig;
 
 mod data_constants;
 
+// Helper functions for accessing different data sizes
+pub fn get_small_data() -> &'static [f64] {
+    &data_constants::PRICES[..100]
+}
+
+pub fn get_medium_data() -> &'static [f64] {
+    &data_constants::PRICES[..1000]
+}
+
+pub fn get_large_data() -> &'static [f64] {
+    &data_constants::PRICES
+}
+
+pub fn get_small_high() -> &'static [f64] {
+    &data_constants::HIGH[..100]
+}
+
+pub fn get_medium_high() -> &'static [f64] {
+    &data_constants::HIGH[..1000]
+}
+
+pub fn get_small_low() -> &'static [f64] {
+    &data_constants::LOW[..100]
+}
+
+pub fn get_medium_low() -> &'static [f64] {
+    &data_constants::LOW[..1000]
+}
+
+pub fn get_small_close() -> &'static [f64] {
+    &data_constants::CLOSE[..100]
+}
+
+pub fn get_medium_close() -> &'static [f64] {
+    &data_constants::CLOSE[..1000]
+}
+
+pub fn get_small_open() -> &'static [f64] {
+    &data_constants::OPEN[..100]
+}
+
+pub fn get_medium_open() -> &'static [f64] {
+    &data_constants::OPEN[..1000]
+}
+
+pub fn get_small_volume() -> &'static [f64] {
+    &data_constants::VOLUME[..100]
+}
+
+pub fn get_medium_volume() -> &'static [f64] {
+    &data_constants::VOLUME[..1000]
+}
+
 // Momentum indicators
 
 pub fn compute_rsi() -> Vec<f64> {
@@ -20,6 +73,54 @@ pub fn compute_rsi() -> Vec<f64> {
         &data_constants::PRICES,
         ConstantModelType::SmoothedMovingAverage,
         14,
+    ).unwrap()
+}
+
+pub fn compute_rsi_small() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        get_small_data(),
+        ConstantModelType::SmoothedMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_rsi_medium() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        get_medium_data(),
+        ConstantModelType::SmoothedMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_rsi_simple() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        &data_constants::PRICES,
+        ConstantModelType::SimpleMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_rsi_exp() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        &data_constants::PRICES,
+        ConstantModelType::ExponentialMovingAverage,
+        14,
+    ).unwrap()
+}
+
+pub fn compute_rsi_7() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        &data_constants::PRICES,
+        ConstantModelType::SmoothedMovingAverage,
+        7,
+    ).unwrap()
+}
+
+pub fn compute_rsi_21() -> Vec<f64> {
+    momentum_indicators::relative_strength_index(
+        &data_constants::PRICES,
+        ConstantModelType::SmoothedMovingAverage,
+        21,
     ).unwrap()
 }
 
@@ -429,16 +530,76 @@ pub fn compute_ma() -> Vec<f64> {
     moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Simple, 5).unwrap()
 }
 
+pub fn compute_ma_small() -> Vec<f64> {
+    moving_average::moving_average(get_small_data(), MovingAverageType::Simple, 5).unwrap()
+}
+
+pub fn compute_ma_medium() -> Vec<f64> {
+    moving_average::moving_average(get_medium_data(), MovingAverageType::Simple, 5).unwrap()
+}
+
+pub fn compute_ma_10() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Simple, 10).unwrap()
+}
+
+pub fn compute_ma_20() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Simple, 20).unwrap()
+}
+
+pub fn compute_ma_50() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Simple, 50).unwrap()
+}
+
 pub fn compute_sma() -> Vec<f64> {
     moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Smoothed, 5).unwrap()
+}
+
+pub fn compute_sma_small() -> Vec<f64> {
+    moving_average::moving_average(get_small_data(), MovingAverageType::Smoothed, 5).unwrap()
+}
+
+pub fn compute_sma_medium() -> Vec<f64> {
+    moving_average::moving_average(get_medium_data(), MovingAverageType::Smoothed, 5).unwrap()
+}
+
+pub fn compute_sma_20() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Smoothed, 20).unwrap()
 }
 
 pub fn compute_ema() -> Vec<f64> {
     moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Exponential, 5).unwrap()
 }
 
+pub fn compute_ema_small() -> Vec<f64> {
+    moving_average::moving_average(get_small_data(), MovingAverageType::Exponential, 5).unwrap()
+}
+
+pub fn compute_ema_medium() -> Vec<f64> {
+    moving_average::moving_average(get_medium_data(), MovingAverageType::Exponential, 5).unwrap()
+}
+
+pub fn compute_ema_12() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Exponential, 12).unwrap()
+}
+
+pub fn compute_ema_26() -> Vec<f64> {
+    moving_average::moving_average(&data_constants::PRICES, MovingAverageType::Exponential, 26).unwrap()
+}
+
 pub fn compute_mg_dyn() -> Vec<f64> {
     moving_average::mcginley_dynamic(&data_constants::PRICES, 0.0, 5).unwrap()
+}
+
+pub fn compute_mg_dyn_small() -> Vec<f64> {
+    moving_average::mcginley_dynamic(get_small_data(), 0.0, 5).unwrap()
+}
+
+pub fn compute_mg_dyn_medium() -> Vec<f64> {
+    moving_average::mcginley_dynamic(get_medium_data(), 0.0, 5).unwrap()
+}
+
+pub fn compute_mg_dyn_20() -> Vec<f64> {
+    moving_average::mcginley_dynamic(&data_constants::PRICES, 0.0, 20).unwrap()
 }
 
 // Volatility Indicators
